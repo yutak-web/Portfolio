@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap");
+
+:root {
+  font-family: "Manrope", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #4b5b78;
+  background: radial-gradient(
+    circle at top left,
+    #ffffff 0%,
+    #f4f9ff 42%,
+    #eef5ff 100%
+  );
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --heading-color: #132344;
+  --muted: #586987;
+  --subtle: #7f8ea9;
+  --accent: #2f79ff;
+  --display: "Syne", sans-serif;
+  --shadow-card: 0 20px 56px rgba(117, 153, 214, 0.16);
+  --shadow-soft: 0 10px 28px rgba(139, 172, 230, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.44), transparent 32%),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(114, 172, 255, 0.14),
+      transparent 18%
+    );
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--heading-color);
+  font-family: var(--display);
+  line-height: 1.05;
+}
+
+h1 {
+  font-size: clamp(2.35rem, 6.2vw, 4.35rem);
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3.4vw, 2.2rem);
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  font-size: 1.12rem;
+}
+
+#root {
+  min-height: 100vh;
+}
