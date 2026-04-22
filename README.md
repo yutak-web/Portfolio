@@ -1,73 +1,104 @@
-# React + TypeScript + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Yuta Kanehara のポートフォリオサイトです。プロフィール、技術スタック、プロジェクト実績、研究活動、資格、趣味を整理して掲載しています。
 
-Currently, two official plugins are available:
+公開URL: https://yutak-web.github.io/Portfolio/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Home: 自己紹介、技術スタック、代表的なプロジェクトを表示
+- Projects: データ分析コンペ、ハッカソン、個人開発、研究活動をカテゴリ別に一覧表示
+- Project Detail: 各プロジェクトの概要、担当範囲、成果、使用技術、関連リンクを表示
+- About Me: 自己紹介、スキル、経歴、資格、趣味を表示
+- Contact: Mail / GitHub / LinkedIn / Zenn へのリンクをフッターに表示
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React
+- TypeScript
+- Vite
+- React Router
+- Three.js / React Three Fiber / Drei
+- ESLint
+- GitHub Pages
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Requirements
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js 22
+- npm
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+GitHub Actions でも Node.js 22 を使用しています。
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Setup
+
+```bash
+npm ci
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+ローカル開発サーバーを起動します。
+
+## Build
+
+```bash
+npm run build
+```
+
+TypeScript のビルドチェック後、Vite で本番用の `dist` を生成します。
+
+## Preview
+
+```bash
+npm run preview
+```
+
+生成済みの `dist` をローカルで確認します。
+
+## Lint
+
+```bash
+npm run lint
+```
+
+ESLint でコードを検査します。
+
+## Deployment
+
+`main` ブランチへ push すると、GitHub Actions の `Deploy to GitHub Pages` ワークフローが実行されます。
+
+ビルド時は GitHub Pages のサブパスに合わせて `VITE_BASE_PATH=/Portfolio/` を指定しています。ローカルでは `vite.config.ts` の設定により、未指定の場合は `./` が使われます。
+
+## Project Structure
+
+```text
+src/
+  assets/              画像などの静的アセット
+  components/          レイアウト、カード、スキル表示、背景などの共通コンポーネント
+  data/                プロフィール、スキル、プロジェクト、経歴などの表示データ
+  pages/               Home / Projects / Project Detail / About Me の各ページ
+  App.tsx              ルーティング定義
+  main.tsx             エントリーポイント
+public/                favicon などの公開ファイル
+.github/workflows/     GitHub Pages デプロイ設定
+```
+
+## Data Updates
+
+表示内容は主に `src/data/` 配下で管理しています。
+
+- プロフィール: `src/data/profile.ts`
+- スキル: `src/data/skills.ts`
+- データ分析コンペ実績: `src/data/achievementsMl.ts`
+- ハッカソン実績: `src/data/achievementsFe.ts`
+- 個人開発: `src/data/productsPersonal.ts`
+- 研究活動と代表プロジェクト: `src/data/projects.ts`
+- 経歴: `src/data/timeline.ts`
+- 資格: `src/data/certs.ts`
+- 趣味: `src/data/hobbies.ts`
+
+プロジェクトを追加する場合は `Project` 型に合わせてデータを追加し、必要に応じて `src/assets/` に画像を配置します。
