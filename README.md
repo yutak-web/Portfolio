@@ -93,10 +93,11 @@ public/                favicon などの公開ファイル
 
 - プロフィール: `src/data/profile.ts`
 - スキル: `src/data/skills.ts`
-- データ分析コンペ実績: `src/data/achievementsMl.ts`
-- ハッカソン実績: `src/data/achievementsFe.ts`
-- 個人開発: `src/data/productsPersonal.ts`
-- 研究活動と代表プロジェクト: `src/data/projects.ts`
+- プロジェクト一覧: `src/data/projects/index.ts`
+- データ分析コンペ実績: `src/data/projects/achievementsMl.ts`
+- ハッカソン実績: `src/data/projects/achievementsFe.ts`
+- 個人開発: `src/data/projects/productsPersonal.ts`
+- 研究活動: `src/data/projects/research.ts`
 - 経歴: `src/data/timeline.ts`
 - 資格: `src/data/certs.ts`
 - 趣味: `src/data/hobbies.ts`

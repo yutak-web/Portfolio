@@ -1,9 +1,9 @@
-import aihack2023Image from "../assets/Aihack_2023.jpeg";
-import aihack2025Image from "../assets/Aihack_2025.webp";
-import financialCompetitionImage from "../assets/Financial_Data_Competition_2024.png";
-import signateStudentCup2025Image from "../assets/SIGNATE_Student_Cup_2025.png";
-import signateCup2024Image from "../assets/SIGNATE_Cup_2024.png";
-import type { Project } from "./types";
+import aihack2023Image from "../../assets/Aihack_2023.jpeg";
+import aihack2025Image from "../../assets/Aihack_2025.webp";
+import financialCompetitionImage from "../../assets/Financial_Data_Competition_2024.png";
+import signateStudentCup2025Image from "../../assets/SIGNATE_Student_Cup_2025.png";
+import signateCup2024Image from "../../assets/SIGNATE_Cup_2024.png";
+import type { Project } from "../types";
 
 export const achievementsMlProjects: Project[] = [
   {
@@ -31,9 +31,14 @@ export const achievementsMlProjects: Project[] = [
       },
       {
         label: "参加報告書",
-        href: "https://www.canva.com/design/DAHAP35f9DA/bJgY46xHFFhrqzXGO_p6Pw/view?utm_content=DAHAP35f9DA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he595050fae",
+        href: "https://canva.link/fmayg6mdbox20xx",
       },
     ],
+    embed: {
+      title: "第２回 金融データ活用チャレンジ 参加報告書",
+      src: "https://www.canva.com/design/DAHAP35f9DA/bJgY46xHFFhrqzXGO_p6Pw/view?embed",
+      href: "https://canva.link/fmayg6mdbox20xx",
+    },
     sections: [
       {
         title: "内容",
@@ -141,7 +146,16 @@ export const achievementsMlProjects: Project[] = [
         label: "開催記事",
         href: "https://aiful-group.com/n/nbd5493c8764d",
       },
+      {
+        label: "発表資料",
+        href: "https://canva.link/04nqedz61u9v9ml",
+      },
     ],
+    embed: {
+      title: "第11回アイフルハッカソン aihack 発表資料",
+      src: "https://www.canva.com/design/DAGgkX7w7jA/ILF0EtFZcR50tzmawFNrMA/view?embed",
+      href: "https://canva.link/04nqedz61u9v9ml",
+    },
     sections: [
       {
         title: "内容",
