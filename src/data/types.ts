@@ -25,6 +25,12 @@ export type ProjectLink = {
   href: string;
 };
 
+export type ProjectEmbed = {
+  title: string;
+  src: string;
+  href: string;
+};
+
 export type Project = {
   slug: string;
   title: string;
@@ -39,6 +45,7 @@ export type Project = {
   imageAlt?: string;
   points?: string[];
   links?: ProjectLink[];
+  embed?: ProjectEmbed;
   sections: ProjectSection[];
 };
 

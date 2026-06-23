@@ -1,8 +1,8 @@
-import egh1stImage from "../assets/EGH1st.webp";
-import jphacks2025Image from "../assets/JPHACKS2025.jpeg";
-import travelHubImage from "../assets/Travel_hub.png";
-import yeahYenImage from "../assets/Yeah!-Yen!.png";
-import type { Project } from "./types";
+import egh1stImage from "../../assets/EGH1st.webp";
+import jphacks2025Image from "../../assets/JPHACKS2025.jpeg";
+import travelHubImage from "../../assets/Travel_hub.png";
+import yeahYenImage from "../../assets/Yeah!-Yen!.png";
+import type { Project } from "../types";
 
 export const achievementsFeProjects: Project[] = [
   {
@@ -31,7 +31,16 @@ export const achievementsFeProjects: Project[] = [
         label: "Webサイト",
         href: "https://mogufinder-frontend-hoji7n3kqq-an.a.run.app/",
       },
+      {
+        label: "発表資料",
+        href: "https://canva.link/ij1qicrwnsrklet",
+      },
     ],
+    embed: {
+      title: "JPHACKS 2025 決勝 発表資料",
+      src: "https://www.canva.com/design/DAHNXLRW2Og/yWbiDGwKVS5F2SoUmK95gw/view?embed",
+      href: "https://canva.link/ij1qicrwnsrklet",
+    },
     sections: [
       {
         title: "内容",

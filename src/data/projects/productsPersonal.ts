@@ -1,4 +1,5 @@
-import type { Project } from "./types";
+import type { Project } from "../types";
+import PokerTotalizationSystemImage from "../../assets/poker_totalization_system.png";
 
 export const personalProductProjects: Project[] = [
   {
@@ -45,7 +46,8 @@ export const personalProductProjects: Project[] = [
     summary: "所属するPokerサークルの収支を管理するWebアプリ",
     impact: "サークル内の収支管理をWeb上で扱えるようにしました。",
     role: "設計、実装、Firebase連携、運用",
-    imageLabel: "Poker",
+    imageLabel: "Poker Totalization System",
+    imageSrc: PokerTotalizationSystemImage,
     stack: ["React", "TypeScript", "Vite", "Firebase"],
     points: [
       "所属するPokerサークルの収支を管理するアプリ",
@@ -60,7 +62,16 @@ export const personalProductProjects: Project[] = [
         label: "GitHub",
         href: "https://github.com/BigFish-Poker-Dev/Poker-Totalization-System.git",
       },
+      {
+        label: "発表資料",
+        href: "https://canva.link/mgr6ry8hd6mltp7",
+      },
     ],
+    embed: {
+      title: "Poker Totalization System 発表資料",
+      src: "https://www.canva.com/design/DAHNXivt89s/qqoiOQVfbEyEZn6kqpxk7g/view?embed",
+      href: "https://canva.link/mgr6ry8hd6mltp7",
+    },
     sections: [
       {
         title: "概要",

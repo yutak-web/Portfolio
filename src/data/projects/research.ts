@@ -1,17 +1,14 @@
-import { achievementsFeProjects } from "./achievementsFe";
-import { achievementsMlProjects } from "./achievementsMl";
-import { personalProductProjects } from "./productsPersonal";
-import groupworkAnalysisImage from "../assets/analysis_result_filterd.png";
-import type { Project } from "./types";
+import groupworkAnalysisImage from "../../assets/analysis_result_filterd.png";
+import type { Project } from "../types";
 
-const researchProjects: Project[] = [
+export const researchProjects: Project[] = [
   {
     slug: "research-groupwork-collaboration-patterns",
     title: "グループワークにおける役割分析のための協同パターン抽出",
     category: "研究活動",
     year: "2026",
     summary:
-      "グループワークの映像記録から、参加者ごとの役割構造を教師なし学習で抽出",
+      "電子情報通信学会 2026で口頭発表。マシュマロチャレンジのビデオ記録を対象に、LDAを用いて協同パターンを抽出し、役割の時系列的な変化を可視化する分析支援ツールを開発。",
     impact:
       "マシュマロチャレンジのデータから「提案・説明・主導」「傾聴・同調」「作業・没頭」という解釈可能な3つの協同パターンを抽出し、時系列での役割変化を可視化。",
     role: "研究設計、インタラクション単語設計、LDAによる協同パターン抽出、安定解選択、可視化ツール開発、論文執筆",
@@ -31,6 +28,17 @@ const researchProjects: Project[] = [
       "100回のLDA試行とJensen-Shannon距離に基づくk近傍密集度により、再現性の高い代表解を選択",
       "協同パターン空間プロット、参加者別の平均分布、時系列推移を組み合わせた分析支援ツールを開発",
     ],
+    links: [
+      {
+        label: "発表資料",
+        href: "https://canva.link/3yawyifys9m9lae",
+      },
+    ],
+    embed: {
+      title: "電子情報通信学会 2026 発表資料 (一部改変版)",
+      src: "https://www.canva.com/design/DAHNXQuRspg/wWkkzyfVXk5REf1nDqPZZQ/view?embed",
+      href: "https://canva.link/3yawyifys9m9lae",
+    },
     sections: [
       {
         title: "背景",
@@ -51,20 +59,3 @@ const researchProjects: Project[] = [
     ],
   },
 ];
-
-export const projects: Project[] = [
-  ...achievementsMlProjects,
-  ...achievementsFeProjects,
-  ...personalProductProjects,
-  ...researchProjects,
-];
-
-export const featuredProjectSlugs = [
-  "financial-data-challenge-2024",
-  "mogufinder-jphacks-2025",
-  "research-groupwork-collaboration-patterns",
-];
-
-export const featuredProjects = featuredProjectSlugs
-  .map((slug) => projects.find((project) => project.slug === slug))
-  .filter((project): project is Project => Boolean(project));

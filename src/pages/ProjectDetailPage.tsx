@@ -94,6 +94,34 @@ export function ProjectDetailPage() {
         </section>
       )}
 
+      {project.embed && (
+        <section className="content-section">
+          <div className="section-heading section-heading--split">
+            <div>
+              <div className="section-eyebrow">Canva</div>
+              <h2>{project.embed.title}</h2>
+            </div>
+            <a
+              href={project.embed.href}
+              className="button-link button-link--ghost"
+              target="_blank"
+              rel="noreferrer"
+            >
+              別タブで開く
+            </a>
+          </div>
+          <div className="canva-embed">
+            <iframe
+              src={project.embed.src}
+              title={project.embed.title}
+              loading="lazy"
+              allow="fullscreen"
+              allowFullScreen
+            />
+          </div>
+        </section>
+      )}
+
       <section className="detail-sections">
         {project.sections.map((section) => (
           <article key={section.title} className="content-card content-card--detail">
