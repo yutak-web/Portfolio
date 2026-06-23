@@ -82,7 +82,16 @@ export const achievementsFeProjects: Project[] = [
         label: "GitHub",
         href: "https://github.com/tatesoto/Hackathon.git",
       },
+      {
+        label: "発表資料",
+        href: "https://canva.link/4eb2muzhff01mlm",
+      },
     ],
+    embed: {
+      title: "第1回 Engineer Guild Hackathon 発表資料",
+      src: "https://www.canva.com/design/DAHNXxKe00A/H0J3Bp1BhqTKd6vdgsL4Lg/view?embed",
+      href: "https://canva.link/4eb2muzhff01mlm",
+    },
     sections: [
       {
         title: "内容",
